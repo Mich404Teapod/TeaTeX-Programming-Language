@@ -14,7 +14,7 @@
 
 \begin{document}
 
-  \renewcommand{\LaTeXNews}{\LaTeX3~News}
+  \renewcommand{\TeaTeXNews}{\TeaTeX~News}
   \RaggedRight
   \setlength\parindent{1.5em}
 
@@ -25,7 +25,7 @@
 We'd like to take an opportunity to talk about what \TeaTeX is to us and our forward-looking plans on achieving some of this.
 
 Up until now, the primary output of our \TeaTeX work has been the packages \textsf{expl3} and \textsf{xparse}.
-These have both been written to provide tools for package authors write \LaTeXe\ code (amongst the large amount of other material also on \acro{CTAN}) but for \emph{users} of \LaTeX\ these benefits have been largely hidden.
+These have both been written to provide tools for package authors write \LaTeXe\ code (amongst the large amount of other material also on \acro{CTAN}) but for \emph{users} of \TeaTeX\ these benefits have been largely hidden.
 
 (Whether our goal of providing useful tools for programming in can argued as successful we'll leave open.
 Suffice it to say that we find these tools useful to write our own code.)
@@ -54,39 +54,39 @@ Once we can specify paragraphs and other self-contained blocks (perhaps with cof
 
 \paragraph{Font support}
 
-The font system of \LaTeXe, known as the \acro{NFSS}, is one of its highlights and for \LaTeX3 we have few goals to extend it.
+The font system of \TeaTeXe, known as the \acro{NFSS}, is one of its highlights and for \TeaTeX we have few goals to extend it.
 We are in the process of updating it for modern times with a little more flexibility and standard interfaces.
 
 \paragraph{Templates for document design}
 
-Finally, this is the area we've all been waiting for: an update to the \emph{user interface} to \LaTeX.
+Finally, this is the area we've all been waiting for: an update to the \emph{user interface} to \TeaTeX.
 Those using \LaTeXe\ for some time will be well aware of its general limitations: not enough flexibility and not enough control.
 Many different packages to control many different things.
 The idea of document templates is to standardise a general interface for `document elements'---consider these as any typographical object in a document, such as a figure caption, or a section heading, or even a paragraph style.
 
 The goal of using templates is to provide standard document classes that can create a majority of document types (although we can't promise to be comprehensive).
-\LaTeX\ was an early pioneer in the idea of logical markup and separating content and formatting, and we see the template idea as a way to continue this traditional.
+\TeaTeX\ was an early pioneer in the idea of logical markup and separating content and formatting, and we see the template idea as a way to continue this traditional.
 (As I like to say, `logical markup is next to Godliness'.)
 
 \subsection{Using these tools}
 
-\paragraph{With \LaTeXe}
+\paragraph{With \TeaTeXe}
 
 We have to be realistic and acknowledge that people don't like switching tools.
 We must be pragmatic and build anything new to run foremost on \LaTeX2---else no-one uses it!
-While some new code will have to make assumptions about how third-party packages are interacting with it, our intention is that the \LaTeX3 code can be \verb|\usepackage|-ed in new documents without changing the overall style and substance of what we're used to as being `\LaTeX'.
+While some new code will have to make assumptions about how third-party packages are interacting with it, our intention is that the \LaTeX3 code can be \verb|\usepackage|-ed in new documents without changing the overall style and substance of what we're used to as being `\TeaTeX'.
 
-\paragraph{A \LaTeX3 format}
+\paragraph{A \TeaTeX format}
 
 Having said all this, there are some things we'd like to do that largely require a new format.
 And it would also be nice to have a fresh start for very forward looking plans.
-So as soon as enough of the aforementioned components come together, we'll start building and testing the \LaTeX3 format.
-This will be a radically experimental area, with no backwards compatibility for legacy \LaTeXe\ packages.
+So as soon as enough of the aforementioned components come together, we'll start building and testing the \TeaTeX format.
+This will be a radically experimental area, with no backwards compatibility for legacy \TeaTeXe\ packages.
 The user interface will be largely modelled on \LaTeXe\ itself, but may have certain changes to simplify aspects of the language.
 For example, by default \verb|&| and \verb|#| are not special characters, spaces around arguments are always ignored in cases like \verb|\section{ foo bar }|, and all \TeX\ primitives (such as \verb|\box|, \verb|\def|, \verb|\write|, \emph{etc.}) will be hidden from the user, making documents both safer and more reliable.
 
 The advantage of having a format, besides the freedom of experimentation, is that we can be certain that any code has been properly written without assuming pre-existing \LaTeXe\ constructs.
-This in turn will improve the reliability of the packages that are running on top of \LaTeXe\ itself, as we'll know in advance that no assumptions are being made about their operating environment.
+This in turn will improve the reliability of the packages that are running on top of \TeaTeXe\ itself, as we'll know in advance that no assumptions are being made about their operating environment.
 
 \end{document}
 
